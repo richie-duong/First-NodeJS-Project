@@ -1,0 +1,38 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-return-left" aria-hidden="true"></i> Back</a>
+<br>
+<br>
+<h3>Viewing Record Entry</h3><br><br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID #</th>
+            <th scope="col">source</th>
+            <th scope="col">latin.name_nom.latin</th>
+            <th scope="col">english.name_nom.anglais</th>
+            <th scope="col">french.name_nom.franÃ§ais</th>
+            <th scope="col">year_annÃ©e</th>
+            <th scope="col">month_mois</th>
+            <th scope="col">number.otoliths_nombre.otolithes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Apply data from 'rows' object to each table row -->
+        {{#each rows}}
+        <tr>
+            <th scope="row">{{this.nafo_id}}</th>
+            <td>{{this.source}}</td>
+            <td>{{this.latin-name_nom-latin}}</td>
+            <td>{{this.english-name_nom-anglais}}</td>
+            <td>{{this.french-name_nom-franÃ§ais}}</td>
+            <td>{{this.year_annÃ©e}}</td>
+            <td>{{this.month_mois}}</td>
+            <td>{{this.number-otoliths_nombre-otolithes}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-return-left" aria-hidden="true"></i> Back</a>
+<br>
+<br>
+<h2>View NAFO Data</h2>
+<br>
+<h6>Filter All-Time Total # of Otoliths Collected from Atlantic Cods By:</h4>
+<a href="viewdata-source" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Source</a>
+<a href="viewdata-seasonal" type="button" style="background-color:#555555; color:white" class="btn btn-light btn-small"><i class="bi bi-arrow-clockwise"></i> Seasons</a>
+<a href="viewdata-decade" type="button" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Decade</a><br><br>
+
+<!-- Set up canvas to make seasonal chart responsive -->
+<div>
+<canvas id="seasonalChart"></canvas>
+</div>
+
+<!-- Content Delivery Network -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Creating seasonal chart and modifying with chart settings -->
+<script>
+  const schrt = document.getElementById('seasonalChart');
+
+  new Chart(schrt, {
+    type: 'bar',
+    data: {
+      labels: ['Spring (March - May)', 'Summer (June - August)', 'Autumn (September - November)', 'Winter (December - February)'],
+      datasets: [{
+        label: '# of Otoliths',
+        data: [{{spring}}, {{summer}}, {{autumn}}, {{winter}}],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<br>

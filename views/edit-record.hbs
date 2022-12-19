@@ -1,0 +1,16 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-return-left" aria-hidden="true"></i> Back</a>
+<br>
+<br>
+<h2>Edit the NAFO Record</h2>
+
+<!-- Apply data from 'rows' object in each textfield -->
+{{#each rows}}
+<form method="POST" action="/editrecord/{{this.nafo_id}}">
+    {{> nafo-form}}
+</form>
+{{/each}}

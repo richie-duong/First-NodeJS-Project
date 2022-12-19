@@ -1,0 +1,47 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-return-left" aria-hidden="true"></i> Back</a>
+<br>
+<br>
+<h2>View NAFO Data</h2>
+<br>
+<h6>Filter All-Time Total # of Otoliths Collected from Atlantic Cods By:</h4>
+<a href="viewdata-source" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Source</a>
+<a href="viewdata-seasonal" type="button" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Seasons</a>
+<a href="viewdata-decade" type="button" style="background-color:#555555; color:white" class="btn btn-light btn-small"><i class="bi bi-arrow-clockwise"></i> Decade</a><br><br><br><br>
+
+<!-- Set up canvas to make decade chart responsive -->
+<div>
+<canvas id="decChart"></canvas>
+</div>
+
+<!-- Content Delivery Network -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Creating decade chart and modifying with chart settings -->
+<script>
+  const decchrt = document.getElementById('decChart');
+
+  new Chart(decchrt, {
+    type: 'bar',
+    data: {
+      labels: ['1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'],
+      datasets: [{
+        label: '# of Otoliths',
+        data: [{{d1}}, {{d2}}, {{d3}}, {{d4}}, {{d5}}, {{d6}}, {{d7}}, {{d8}}],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<br>

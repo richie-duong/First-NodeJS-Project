@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3>NAFO Otoliths Dataset</h3>
+<h4>CST 8333 - Practical Project 4: Database Connectivity and Data Visualization w/ Vertical Bar Charts</h4><br>
+<h5>Presented By: Richard Duong</h5>
+<br>
+<a href="addrecord" type="button" style="background-color:#00AB2C; color:white" class="btn btn-light btn-small"><i class="bi bi-plus" aria-hidden="true"></i> New Record</a>
+<a href="viewdata-source" type="button" style="background-color:#9700c9; color:white" class="btn btn-light btn-small"><i class="bi bi-graph-up-arrow"></i> Visualize Data</a>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Reload Dataset</a>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">source</th>
+            <th scope="col">latin.name_nom.latin</th>
+            <th scope="col">english.name_nom.anglais</th>
+            <th scope="col">french.name_nom.franÃ§ais</th>
+            <th scope="col">year_annÃ©e</th>
+            <th scope="col">month_mois</th>
+            <th scope="col">number.otoliths_nombre.otolithes</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Apply data from 'rows' object to each table row -->
+        {{#each rows}}
+        <tr>
+            <th scope="row">{{this.nafo_id}}</th>
+            <td>{{this.source}}</td>
+            <td>{{this.latin-name_nom-latin}}</td>
+            <td>{{this.english-name_nom-anglais}}</td>
+            <td>{{this.french-name_nom-franÃ§ais}}</td>
+            <td>{{this.year_annÃ©e}}</td>
+            <td>{{this.month_mois}}</td>
+            <td>{{this.number-otoliths_nombre-otolithes}}</td>
+            <td style='white-space: nowrap'>
+                <a href="/viewrecord/{{this.nafo_id}}" type="button" style="background-color:#007CCC; color:white" class="btn btn-light btn-small"><i class="bi bi-eye"></i></a>
+                <a href="/editrecord/{{this.nafo_id}}" type="button" style="background-color:#00AB2C; color:white" class="btn btn-light btn-small"><i class="bi bi-pencil"></i></a>
+                <a href="/{{this.nafo_id}}" type="button" style="background-color:#CC0000; color:white" class="btn btn-light btn-small"><i class="bi bi-trash"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

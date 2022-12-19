@@ -1,0 +1,49 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/" type="button" class="btn btn-light btn-small"><i class="bi bi-arrow-return-left" aria-hidden="true"></i> Back</a>
+<br>
+<br>
+<h2>View NAFO Data</h2>
+<br>
+<h6>Filter All-Time Total # of Otoliths Collected from Atlantic Cods By:</h4>
+<a href="viewdata-source" type="button" style="background-color:#555555; color:white" class="btn btn-light btn-small"><i class="bi bi-arrow-clockwise"></i> Source</a>
+<a href="viewdata-seasonal" type="button" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Seasons</a>
+<a href="viewdata-decade" type="button" class="btn btn-light btn-small"><i class="bi bi-bar-chart-line-fill"></i> Decade</a>
+
+<!-- Set up canvas to make source chart responsive -->
+<br><br>
+<div>
+  <canvas id="sourceChart"></canvas>
+</div>
+
+<!-- Content Delivery Network -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Creating source chart and modifying with chart settings -->
+<script>
+  const srcchrt = document.getElementById('sourceChart');
+
+  new Chart(srcchrt, {
+    type: 'bar',
+    data: {
+      labels: ['Commercial', 'Observers', 'RV-4T', 'SENT-4T'],
+      datasets: [{
+        label: '# of Otoliths',
+        data: [{{firstLabel}}, {{secondLabel}}, {{thirdLabel}}, {{fourthLabel}}],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+<br>
