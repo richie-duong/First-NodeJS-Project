@@ -1,5 +1,8 @@
 # Node.js CRUD & Data Visualization Web App
 
+![nodeproject](https://user-images.githubusercontent.com/105457925/231934726-7f9f626d-3e99-4856-aa77-8a027de7c197.png)
+
+
 ## Description
 This application is a CRUD app built with JavaScript and the Node.js runtime environment, and contains data visualization for the data within the application. This project was developed as an academic project during my final semester at Algonquin College, and served as my first project using Node.js. With this project I applied project planning, research, testing, and the implementation of advanced concepts from past courses for this Node.js project.
 
