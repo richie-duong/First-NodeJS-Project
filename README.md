@@ -15,7 +15,7 @@ Below is a complete list of libraries used within this project:
 
 ## How to Run / Use the Project
 
-###IMPORTANT: To run this project, you must have a local MySQL database on your computer, and the following [dataset](https://open.canada.ca/data/en/dataset/1d41c12a-4d33-8992-e651-d76e481c7862/resource/51bdbad9-d6c2-4c9e-9bef-7ea0edbb3887?inner_span=True) within the databse.
+IMPORTANT: To run this project, you must have a local MySQL database set up on your computer, and the following [dataset](https://open.canada.ca/data/en/dataset/1d41c12a-4d33-8992-e651-d76e481c7862/resource/51bdbad9-d6c2-4c9e-9bef-7ea0edbb3887?inner_span=True) within the databse.
 
 At the moment, this project has not yet been deployed since it is still in development. However, if you're interested in running this application, you can follow the steps below:
 1. Download the project / clone this repository onto Visual Studio Code or IDE of your choice.
